@@ -1,0 +1,59 @@
+:root {
+  /* Editorial Color Palette: Warm Light Ash Background with Pure White Floating Panels */
+  --bg: #ECEAE6;             /* Warm light ash page background */
+  --bg-soft: #F6F5F3;        /* Warm off-white for sub-elements and input fills */
+  --panel-bg: #FFFFFF;       /* Pure white floating cards, panels, and navbar */
+  --ink: #0E0E0E;            /* Primary text, near-black */
+  --ash-900: #2A2A2A;        /* Secondary headings, dark UI parts */
+  --ash-600: #6B6B6B;        /* Secondary text */
+  --ash-400: #A3A3A3;        /* Placeholders, disabled text */
+  --ash-200: #D3D0CA;        /* Hairline borders & dividers */
+  
+  /* Accent Colors */
+  --accent: #7A1620;         /* Dark red / oxblood */
+  --accent-hover: #5E0F18;   /* Darker oxblood */
+  --accent-tint: #F3E9EA;    /* Subtle light red wash */
+  --accent-light: #C4525E;   /* Lighter red for hero accent typography */
+
+  /* Typography */
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Geometry & Rhythm */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --max-width: 1180px;
+  --unit: 8px;
+
+  /* Borders & Floating Shadows */
+  --border-hairline: 1px solid #D3D0CA;
+  --border-accent: 1px solid var(--accent);
+  --shadow-floating: 0 30px 60px -34px rgba(0, 0, 0, 0.18);
+  --shadow-hover: 0 32px 64px -28px rgba(0, 0, 0, 0.22);
+
+  /* Easing & Timing */
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+  --trans-fast: 180ms ease;
+  --trans-smooth: 250ms var(--ease-editorial);
+}
+
+/* =====================================================
+   FOREST THEME (Scoped exclusively to body[data-theme="forest"])
+   ===================================================== */
+body[data-theme="forest"] {
+  --bg: #0F2A1D;                          /* Forest green page background */
+  --panel-bg: #133224;                    /* Dark forest surface */
+  --surface: #133224;
+  --bg-soft: #173B2B;                     /* Alternate block ground */
+  --ink: #EFE6D0;                         /* Beige primary text */
+  --ash-900: #EFE6D0;
+  --ash-600: #BDB296;                     /* Muted beige text */
+  --ash-400: #8C846E;                     /* Subdued beige */
+  --ash-200: rgba(239, 230, 208, 0.16);   /* Beige hairlines */
+  --border-hairline: 1px solid rgba(239, 230, 208, 0.16);
+  --accent: #D8C39A;                      /* Sand accent */
+  --accent-hover: #E2D2B0;
+  --accent-tint: rgba(216, 195, 154, 0.14);
+  --accent-light: #D8C39A;
+  --shadow-floating: 0 30px 60px -30px rgba(0, 0, 0, 0.45);
+}

@@ -1,0 +1,120 @@
+/* =====================================================
+   EDITORIAL SIGNATURE CURSOR
+   ===================================================== */
+
+.editorial-cursor-follower {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .editorial-cursor-follower {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 999999;
+    will-change: transform, width, height, background-color, border;
+    border-radius: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transition: 
+      width 250ms cubic-bezier(0.22, 1, 0.36, 1),
+      height 250ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-radius 250ms ease,
+      background-color 250ms ease,
+      border-color 250ms ease,
+      opacity 200ms ease;
+  }
+
+  /* Default State: 10px solid ink ball */
+  .cursor-state-default {
+    width: 10px;
+    height: 10px;
+    background-color: var(--ink);
+    border: 1px solid transparent;
+    opacity: 1;
+  }
+
+  /* Hover State (links, buttons, clickable elements, cards): 44px soft accent ring */
+  .cursor-state-hover {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(122, 22, 32, 0.14);
+    border: 1px solid var(--accent);
+    opacity: 1;
+  }
+
+  /* Text Field Hover State: 2px x 22px accent caret bar */
+  .cursor-state-text {
+    width: 2px;
+    height: 22px;
+    border-radius: 1px;
+    background-color: var(--accent);
+    border: none;
+    opacity: 1;
+  }
+
+  /* Mouse Down State: shrinks to 6px */
+  .cursor-state-active {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent);
+    border: none;
+    opacity: 1;
+  }
+
+  /* Over dark surfaces: turns white */
+  .cursor-on-dark {
+    background-color: #FFFFFF !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+  }
+
+  /* Inactive or left viewport: fade out */
+  .cursor-hidden {
+    opacity: 0 !important;
+  }
+
+  /* =====================================================
+     FOREST THEME CURSOR OVERRIDES
+     ===================================================== */
+  body[data-theme="forest"] .editorial-cursor-follower {
+    mix-blend-mode: normal !important;
+  }
+
+  body[data-theme="forest"] .cursor-state-default {
+    width: 10px;
+    height: 10px;
+    background-color: #0A0A0A !important;
+    border: 1.5px solid #EFE6D0 !important;
+    opacity: 1;
+  }
+
+  body[data-theme="forest"] .cursor-state-hover {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(216, 195, 154, 0.18) !important;
+    border: 1px solid #D8C39A !important;
+    opacity: 1;
+  }
+
+  body[data-theme="forest"] .cursor-state-text {
+    width: 2px;
+    height: 22px;
+    background-color: #D8C39A !important;
+    border: none !important;
+    opacity: 1;
+  }
+
+  body[data-theme="forest"] .cursor-state-active {
+    width: 6px;
+    height: 6px;
+    background-color: #D8C39A !important;
+    border: 1px solid #EFE6D0 !important;
+    opacity: 1;
+  }
+
+  body[data-theme="forest"] .cursor-on-dark {
+    background-color: #0A0A0A !important;
+    border: 1.5px solid #EFE6D0 !important;
+  }
+}

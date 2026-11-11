@@ -1,0 +1,63 @@
+[
+  {
+    "id": "q01",
+    "question": "Who created the World Wide Web and what technologies were initially designed for it?",
+    "ground_truth": "Tim Berners-Lee created the World Wide Web in 1989 while at CERN, designing HTML, HTTP, and the first web browser.",
+    "type": "local"
+  },
+  {
+    "id": "q02",
+    "question": "What is the relationship between CERN and the invention of HTTP?",
+    "ground_truth": "Tim Berners-Lee was working as a scientist at CERN in Geneva when he invented HTTP and the World Wide Web.",
+    "type": "local"
+  },
+  {
+    "id": "q03",
+    "question": "What are the primary overarching themes and focus areas described across the corpus?",
+    "ground_truth": "The documents focus on technological breakthroughs, networked information systems, foundational scientific discoveries, and collaborative research institutions.",
+    "type": "global"
+  },
+  {
+    "id": "q04",
+    "question": "Which organizations or institutions contributed to the development of early computing architectures?",
+    "ground_truth": "CERN, universities, and early computing research labs collaborated to establish the networking protocols and hardware infrastructure.",
+    "type": "local"
+  },
+  {
+    "id": "q05",
+    "question": "Summarize how individual inventors influenced modern digital communication protocols.",
+    "ground_truth": "Pioneering researchers designed open standards including HTML, HTTP, and hyperlinked document systems that formed the backbone of global communication.",
+    "type": "global"
+  },
+  {
+    "id": "q06",
+    "question": "Where was the World Wide Web developed and in what year was it introduced?",
+    "ground_truth": "It was developed at CERN in Geneva, Switzerland, and introduced in 1989.",
+    "type": "local"
+  },
+  {
+    "id": "q07",
+    "question": "What role does HTML play according to the text?",
+    "ground_truth": "HTML was designed by Tim Berners-Lee as the standard markup language for formatting documents on the Web.",
+    "type": "local"
+  },
+  {
+    "id": "q08",
+    "question": "What are the common patterns observed among the different technological milestones mentioned?",
+    "ground_truth": "Milestones involve collaborative research institutions, open standard development, and iterative protocol improvements connecting researchers across borders.",
+    "type": "global"
+  },
+  {
+    "id": "q09",
+    "question": "How are the entities in Geneva connected to international scientific research?",
+    "ground_truth": "Geneva hosts CERN, which serves as an international physics laboratory where researchers from across the world collaborate.",
+    "type": "local"
+  },
+  {
+    "id": "q10",
+    "question": "Provide a high-level summary comparing the foundational technologies developed across all groups.",
+    "ground_truth": "The corpus details foundational standards including markup languages, transmission protocols, browser clients, and server environments enabling seamless document sharing.",
+    "type": "global"
+  }
+]
+
