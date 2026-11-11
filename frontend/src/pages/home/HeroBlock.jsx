@@ -11,11 +11,10 @@ import { TextReveal } from '../../engine/textReveal';
 import { SPRING_CONFIGS } from '../../engine/spring';
 import { apiClient } from '../../api/client';
 import MagneticButton from '../../components/MagneticButton';
-import { Cpu, Database, Activity, Menu, X, ArrowRight } from 'lucide-react';
+import { Cpu, Database, Activity, ArrowRight } from 'lucide-react';
 
 export function HeroBlock({ onSceneReady, entranceReady = false }) {
   const [stats, setStats] = useState({ nodes: '—', edges: '—', communities: '—', chunks: '—' });
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Fetch telemetry figures
   useEffect(() => {
@@ -66,69 +65,11 @@ export function HeroBlock({ onSceneReady, entranceReady = false }) {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          padding: '1.5rem 1.5rem 2.5rem 1.5rem',
+          padding: '2.5rem 1.5rem',
           position: 'relative',
           zIndex: 2,
         }}
       >
-        {/* Masthead Header */}
-        <header
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            borderBottom: '1px solid var(--ash-200)',
-            paddingBottom: '16px',
-            marginBottom: '32px',
-          }}
-        >
-          {/* Wordmark Left */}
-          <Link to="/" style={{ textDecoration: 'none', color: 'var(--ink)', display: 'flex', alignItems: 'baseline', gap: '8px' }}>
-            <span style={{ fontFamily: 'var(--font-serif)', fontSize: '24px', fontWeight: 600 }}>GraphRAG</span>
-            <span className="meta-label">Local Edition</span>
-          </Link>
-
-          {/* Centered Desktop Nav */}
-          <nav className="desktop-nav" style={{ display: 'flex', gap: '28px', alignItems: 'center' }}>
-            {[
-              { label: 'Home', path: '/' },
-              { label: 'Upload & Index', path: '/index' },
-              { label: 'Ask', path: '/ask' },
-              { label: 'Graph Explorer', path: '/graph' },
-              { label: 'Evaluation', path: '/eval' },
-            ].map((n) => (
-              <Link
-                key={n.path}
-                to={n.path}
-                className="editorial-link"
-                style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.12em', fontWeight: 600 }}
-              >
-                {n.label}
-              </Link>
-            ))}
-          </nav>
-
-          {/* Action Link Right */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <Link
-              to="/index"
-              className="editorial-link meta-label"
-              style={{ color: 'var(--accent)', fontWeight: 700 }}
-            >
-              [ Begin &rarr; ]
-            </Link>
-            <button
-              type="button"
-              className="mobile-burger-btn"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle Menu"
-              style={{ background: 'none', border: 'none', color: 'var(--ink)', cursor: 'pointer', display: 'none' }}
-            >
-              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-            </button>
-          </div>
-        </header>
-
         {/* Middle Content Row: Identity Left & Bracket Telemetry Panels Right */}
         <div
           style={{
