@@ -5,6 +5,22 @@
 
 ---
 
+## 🗺️ Master Documentation Roadmap
+
+For a guided, step-by-step reading flow designed for new developers and engineers, start with:
+* 👉 **[`README_1_ARCHITECTURE_FLOW.md`](file:///d:/agentic%20ai/graph_rag/README_1_ARCHITECTURE_FLOW.md)** — **Master Reading Order & Complete System Flowchart**
+
+### Subsystem Documentation Guides:
+* 🧠 **Models Layer**: [`models/README.md`](file:///d:/agentic%20ai/graph_rag/models/README.md) — Cognitive contracts, Pydantic v2 schemas, few-shot prompts, SHA-256 disk cache.
+* 🖥️ **Backend Core**: [`backend/README.md`](file:///d:/agentic%20ai/graph_rag/backend/README.md) — FastAPI lifecycle, CORS, configuration, LangSmith tracing.
+* ⚙️ **7-Stage Ingestion Pipeline**: [`backend/pipeline/README.md`](file:///d:/agentic%20ai/graph_rag/backend/pipeline/README.md) — In-memory loaders, sliding chunking, entity extraction, cosine alias merging, NetworkX graph build, Louvain community reports, and FAISS persistence.
+* 🔍 **Dual Retrieval Engine**: [`backend/retrieval/README.md`](file:///d:/agentic%20ai/graph_rag/backend/retrieval/README.md) — LLM semantic query router, 2-hop local BFS search, hierarchical community Map-Reduce global search, and naive baseline.
+* 🌐 **REST API Specification**: [`backend/api/README.md`](file:///d:/agentic%20ai/graph_rag/backend/api/README.md) — Upload, async indexing status, query, graph topology, and evaluation route contracts.
+* 📊 **Evaluation Benchmark Suite**: [`backend/evaluation/README.md`](file:///d:/agentic%20ai/graph_rag/backend/evaluation/README.md) — 10-question golden dataset, dual LLM-as-a-judge scorers (Groundedness & Correctness), automated test runner.
+* 🎨 **Editorial Motion Frontend**: [`frontend/README.md`](file:///d:/agentic%20ai/graph_rag/frontend/README.md) — React 18, Vite, Three.js WebGL shaders, 2D Marching Squares canvas, hand-coded mass-spring-damper physics engine.
+
+---
+
 ## 1. System Architecture
 
 The architecture enforces strict one-way dependency isolation:
